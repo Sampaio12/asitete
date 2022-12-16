@@ -1,0 +1,4 @@
+logic/config.py
+env/
+# make pycache ignored
+/*.pyc
