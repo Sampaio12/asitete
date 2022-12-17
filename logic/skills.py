@@ -3,6 +3,7 @@ from  logic.devices import Sound
 from logic.advices import get_ptbr_advice
 import webbrowser as web
 from logic.spotify_api import Spotify
+from logic.contatos import contatos
 
 spotify = Spotify()
 
@@ -10,6 +11,7 @@ class Skills:
     def __init__(self):
         self.sound = Sound()
         self.say = self.sound.talk
+        self.new_comm = self.sound.get_comm
         self.skills = {
             # Tocar música no YouTube
             'assistir': self.music,
@@ -46,6 +48,9 @@ class Skills:
             'discord': self.discord,
             'vs code': self.vscode,
             'quero programar': self.vscode,
+            
+            # Envia whatsapp
+            'enviar mensagem para': self.zap_msg,            
             
             # Dizer Olá
             'oi': self.hello,
@@ -121,6 +126,20 @@ class Skills:
         self.say('Abrindo Discord')
         sys = os.system(discord_exe)
         
+    def zap_msg(self, contato):
+        try:
+            contato = contato.replace(' ', '')
+            tel = contatos[contato]
+            print(contato)
+            self.say('Qual a mensagem?')
+            msg = self.new_comm()
+            print(msg)
+            pywhatkit.sendwhatmsg_instantly(tel, msg, tab_close=True, close_time=8)
+            return
+        except:
+            self.say('Contato não encontrado, tente dizer o nome mais claramente')
+            return        
+        
     def hello(self, comm):
         self.say('Olá, como vai?')
         return
@@ -131,7 +150,7 @@ class Skills:
         return
     
     def can_do(self, comm):
-        self.say('Eu posso tocar músicas, pesquisar no Google, pesquisar no Wikipedia, te dar conselhos, te dizer a hora, abrir o VS Code, e muito mais!')
+        self.say('Eu posso tocar músicas, pesquisar no Google e na Wikipedia, te dar conselhos e dizer a hora, abrir o VS Code ou o Discord, enviar mensagens no whatsapp e muito mais!')
     
     def leave(self, comm):
         self.say('Até mais!')

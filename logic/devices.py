@@ -32,6 +32,9 @@ class Sound:
                 if 'rebeca' in comm:
                     comm = comm.replace('rebeca', '$$')
                     print('/ / /')
+                if 'érica' in comm:
+                    comm = comm.replace('érica', 'érika')
+                    print('/ / /')
                     
             print('.\n.\n.\n')
             return comm   

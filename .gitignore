@@ -1,4 +1,5 @@
 logic/config.py
+logic/contatos.py
 env/
-# make pycache ignored
-/*.pyc
+PyWhatKit_DB.txt
+.cache
