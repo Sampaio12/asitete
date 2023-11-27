@@ -1,6 +1,6 @@
 # Rebeca - Assistente Virtual 👩‍💻
 
-Assistente virtual desenvolvida por mim, [Lucas Borges](https://lucasborgess.com), para fins de estudo e utilização pessoal.
+Assistente virtual desenvolvida por mim, [Marcelo sampaio ](https://lucasborgess.com), para fins de estudo e utilização pessoal.
 
 ## O que é?
 
@@ -34,7 +34,7 @@ Para contribuir com o projeto Rebeca, basta enviar um pull request com as altera
 
 ## Créditos
 
-Desenvolvido por [Lucas Borges](https://lucasborgess.com)
+Desenvolvido por marcelo sampaio ](https://lucasborgess.com)
 
 Linguagem utilizada: [Python](https://www.python.org/)
 
@@ -44,4 +44,4 @@ Gostaria de agradecer aos meus amigos que me ajudaram com ideias de funcionalida
 
 ## Contato
 
-Para entrar em contato comigo, acesse meu [Site pessoal](https://lucasborgess.com), lá você pode encontrar meus outros projetos e informações de contato.
+Para entrar em contato comigo, acesse meu [Site pessoal](https://marcelosampaio.com), lá você pode encontrar meus outros projetos e informações de contato.
